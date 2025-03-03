@@ -1,0 +1,140 @@
+Add Employee Form: The form should include input fields for the
+employee's first name, last name, job title, job description, and job role,
+along with a submit button.
+2. Employee Table: After submitting the form, display the employee data in
+a table with columns for first name, last name, job title, job description,
+and job role
+
+Edit and Delete Functionality: Add "Edit" and "Delete" buttons in each
+row of the table. When the "Edit" button is clicked, allow the user to modify
+the details of that specific employee. When the "Delete" button is clicked,
+remove the employee from the table
+
+
+
+
+
+import React from "react";
+
+function Employeeform() {
+  return (
+    <div>
+      <h1>Employee Form</h1>
+      <div className="firstName">
+        <label> First Name :</label>
+        <input></input>
+      </div>
+
+      <div className="lastname">
+        <label> Last Name :</label>
+        <input></input>
+      </div>
+
+      <div className="job title">
+        <label>Job Title :</label>
+        <input></input>
+      </div>
+
+      <div className="job description">
+        <label>Job Description :</label>
+        <input></input>
+      </div>
+
+      <div className="job role">
+        <label>Job Role :</label>
+        <input></input>
+      </div>
+
+      <button>Submit</button>
+    </div>
+  );
+}
+
+export default Employeeform;
+
+import React from 'react'
+
+function Employeetable() {
+  return (
+    <div>
+      <table>
+        <tr>
+          <th>FirstName</th>
+          <th>LastName</th>
+          <th>Job title</th>
+          <th>Job description</th>
+          <th>Job role</th>
+          <th>Edit</th>
+          <th>Delete</th>
+
+
+        </tr>
+        <tr>
+          <td>Anom</td>
+          <td>Losis</td>
+          <td>Manager</td>
+          <td>Management </td>
+          <td>Manager</td>
+          <td><button>Edit</button></td>
+          <td><button>Delete</button></td>
+
+        </tr>
+        <tr>
+          <td>Lusis</td>
+          <td>Mewy</td>
+          <td>Developer</td>
+          <td>Develop</td>
+          <td>Software</td>
+          <td><button>Edit</button></td>
+          <td><button>Delete</button></td>
+
+        </tr>
+        <tr>
+          <td>Merry</td>
+          <td>Sur</td>
+          <td>Director</td>
+          <td>Director</td>
+          <td>Owner</td>
+          <td><button>Edit</button></td>
+          <td><button>Delete</button></td>
+        </tr>
+        <tr>
+          <td>Hercy</td>
+          <td>Patel</td>
+          <td>Ecommerce</td>
+          <td>Sales </td>
+          <td> Tracker</td>
+          <td><button>Edit</button></td>
+          <td><button>Delete</button></td>
+        </tr>
+        <tr>
+          <td>Gercy</td>
+          <td>Verna</td>
+          <td>Helper</td>
+          <td>Manage</td>
+          <td>Helper</td>
+          <td><button>Edit</button></td>
+          <td><button>Delete</button></td>
+        </tr>
+
+      </table>
+    </div>
+  )
+}
+
+export default Employeetable
+
+import './App.css';
+import Employeeform from './component/Employeeform';
+import Employeetable from './component/Employeetable';
+
+function App() {
+  return (
+    <div className="App">
+     <Employeeform/>
+     <Employeetable/>
+    </div>
+  );
+}
+
+export default App;
